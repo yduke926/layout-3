@@ -66,6 +66,8 @@ body {
 }
 
 /*  MEDIA QUERIES */
+
+/* TABLET VIEW*/
 @media only screen and (max-width: 768px) {
   body {
     grid-template-rows: [header-start] 10vh [header-end hero-start] 40vh [hero-end main-start] 10rem 10rem 10rem[main-end banner-start]12rem[banner-end];
@@ -92,5 +94,27 @@ body {
   .extra {
     grid-column: 2 / span 2;
     grid-row: banner-start / banner-end;
+  }
+}
+
+/* MOBILE VIEW*/
+
+@media only screen and (max-width: 500px) {
+  body {
+    grid-template-rows: [header-start] 10vh [header-end menu-start ] 10vh [menu-end hero-start] 20vh [hero-end main-start] 15rem 10rem 10rem[main-end banner-start]10rem[banner-end];
+  }
+
+  .menu,
+  .main,
+  .banner,
+  .extra,
+  .image {
+    grid-column: 1 / -1;
+  }
+  .menu {
+    grid-row: menu-start / menu-end;
+  }
+  .extra {
+    grid-row: 6 / 7;
   }
 }
