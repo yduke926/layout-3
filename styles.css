@@ -23,7 +23,7 @@ body {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: [header-start] 10vh [header-end hero-start] 90vh [hero-end main-start] 15rem 15rem [main-end banner-start]20vh[banner-end];
+  grid-template-rows: [header-start] 10vh [header-end hero-start] 70vh [hero-end main-start] 15rem 15rem [main-end banner-start]20vh[banner-end];
 
   text-align: center;
 }
@@ -63,4 +63,34 @@ body {
   grid-column: 1 / -1;
   grid-row: banner-start / banner-end;
   background-color: teal;
+}
+
+/*  MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  body {
+    grid-template-rows: [header-start] 10vh [header-end hero-start] 40vh [hero-end main-start] 10rem 10rem 10rem[main-end banner-start]12rem[banner-end];
+  }
+  .header {
+    grid-column: 1 / -1;
+  }
+  .menu {
+    grid-column: 1 / 1;
+    grid-row: main-start / banner-end;
+  }
+  .main {
+    grid-column: 2 / -1;
+    grid-row: main-start / 5;
+  }
+  .banner {
+    grid-column: 2 / -1;
+    grid-row: 5 / 6;
+  }
+  .image {
+    grid-column: 4 / -1;
+    grid-row: banner-start / banner-end;
+  }
+  .extra {
+    grid-column: 2 / span 2;
+    grid-row: banner-start / banner-end;
+  }
 }
