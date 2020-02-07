@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+body {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: [header-start] 10vh [header-end hero-start] 90vh [hero-end main-start] 15rem 15rem [main-end banner-start]20vh[banner-end];
+
+  text-align: center;
+}
+
+.header {
+  grid-column: 1 / 1;
+  grid-row: header-start / header-end;
+  background-color: blueviolet;
+}
+
+.menu {
+  grid-column: 2 / -1;
+  grid-row: header-start / header-end;
+  background-color: blue;
+}
+.hero {
+  grid-column: 1 / -1;
+  grid-row: hero-start / hero-end;
+  background-color: yellowgreen;
+}
+.main {
+  grid-column: 1 / 3;
+  grid-row: main-start / main-end;
+  background-color: orangered;
+}
+.image {
+  grid-column: 4 / -1;
+  grid-row: main-start / 4;
+  background-color: greenyellow;
+}
+.extra {
+  grid-column: 4 / -1;
+  grid-row: 4 / main-end;
+  background-color: goldenrod;
+}
+.banner {
+  grid-column: 1 / -1;
+  grid-row: banner-start / banner-end;
+  background-color: teal;
+}
